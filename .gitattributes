@@ -7,6 +7,7 @@ print("The coin landed on:", flip)
 while True:
     try:
         num_flips = int(input("How many times should we flip the coin? "))
+        print("DEBUG: User entered", num_flips)
         if num_flips > 0:
             break
         else:
@@ -15,9 +16,11 @@ while True:
         print("Please enter a valid integer.")
 
 results = [random.choice(['Heads', 'Tails']) for _ in range(num_flips)]
-
+print("DEBUG: Results list =", results)
 
 counts = Counter(results)
+print("DEBUG: Counter =", counts)
+
 heads = counts.get('Heads', 0)
 tails = counts.get('Tails', 0)
 
