@@ -1,7 +1,9 @@
 import random
 from collections import Counter
+
 flip = random.choice(['Heads', 'Tails'])
 print("The coin landed on:", flip)
+
 while True:
     try:
         num_flips = int(input("How many times should we flip the coin? "))
